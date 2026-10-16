@@ -440,7 +440,7 @@
         "playerA": "John Smith",
         "playerB": "Sarah Johnson",
         "scoreA": 11,
-        "scoreB": 6,
+        "scoreB": 5,
         "winner": "John Smith",
         "isTournamentMatch": true,
         "tournamentName": "Pickle",

@@ -16,5 +16,11 @@
         "username": "viewer",
         "password": "viewer123",
         "role": "Viewer"
+    },
+    {
+        "id": 4,
+        "username": "pabs",
+        "password": "pabs123",
+        "role": "Organizer"
     }
 ]

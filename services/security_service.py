@@ -94,7 +94,7 @@ class SecurityService:
             f"Role: {role}"
         )
 
-        if role != "Viewer":
+        if username != "Anonymous":
 
             if st.sidebar.button(
                 "🚪 Logout"
@@ -102,7 +102,6 @@ class SecurityService:
 
                 st.session_state.clear()
 
-                st.session_state["role"] = "Viewer"
-                st.session_state["username"] = "Anonymous"
-
-                st.rerun()
+                st.switch_page(
+                    "app.py"
+                )

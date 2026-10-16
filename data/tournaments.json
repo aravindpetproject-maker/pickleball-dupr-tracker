@@ -243,11 +243,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D",
-                "winner": "Team 1",
-                "completed": true,
-                "scoreTeam1": 11,
-                "scoreTeam2": 6
+                "team2Player2": "Nithin D"
             },
             {
                 "team1": "Team 1",
@@ -255,11 +251,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "Testplay1 chk",
-                "team2Player2": "Testplay2 chk1",
-                "winner": "Team 1",
-                "completed": true,
-                "scoreTeam1": 11,
-                "scoreTeam2": 7
+                "team2Player2": "Testplay2 chk1"
             },
             {
                 "team1": "Team 2",

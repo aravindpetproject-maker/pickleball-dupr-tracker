@@ -267,99 +267,25 @@ if role in ["Admin", "Organizer"]:
     # Update Tournament Schedule
     # =====================================
 
-    if selected_match.get(
-        "isTournamentMatch"
-    ):
+        if selected_match.get(
+            "isTournamentMatch"
+        ):
 
-        if match_type == "Singles":
+            if match_type == "Singles":
 
-            TournamentService.record_match_result(
-
-                selected_match.get(
-                    "tournamentName"
-                ),
-
-                selected_match.get(
-                    "playerA"
-                ),
-
-                selected_match.get(
-                    "playerB"
-                ),
-
-                winner,
-
-                score_a,
-
-                score_b
-
-            )
-
-        else:
-
-            team1_name = selected_match.get(
-                "teamNameA"
-            )
-
-            team2_name = selected_match.get(
-                "teamNameB"
-            )
-
-
-######debug
-
-            st.write(
-                "Tournament:",
-                selected_match.get(
-                "tournamentName"
-                )
-            )
-
-            st.write(
-                "Team1:",
-                selected_match.get(
-                "teamNameA"
-                )
-            )
-
-            st.write(
-                "Team2:",
-                selected_match.get(
-                "teamNameB"
-                )
-            )
-
-            st.write(
-                "Winner:",
-                winner
-            )
-
-            st.write(
-                "Scores:",
-                score_a,
-                score_b
-            )
-
-
-
-
-######debug
-
-
-
-
-
-            if team1_name and team2_name:
-
-                TournamentService.record_doubles_match_result(
+                TournamentService.record_match_result(
 
                     selected_match.get(
                         "tournamentName"
                     ),
 
-                    team1_name,
+                    selected_match.get(
+                        "playerA"
+                    ),
 
-                    team2_name,
+                    selected_match.get(
+                        "playerB"
+                    ),
 
                     winner,
 
@@ -369,12 +295,86 @@ if role in ["Admin", "Organizer"]:
 
                 )
 
-    st.session_state[
-        "match_updated"
-    ] = True
+            else:
 
-    st.session_state[
-        "refresh_tournament"
-    ] = True
+                team1_name = selected_match.get(
+                    "teamNameA"
+                )
 
-    st.rerun()
+                team2_name = selected_match.get(
+                    "teamNameB"
+                )
+
+
+######debug
+
+                st.write(
+                    "Tournament:",
+                    selected_match.get(
+                    "tournamentName"
+                    )
+                )
+
+                st.write(
+                    "Team1:",
+                    selected_match.get(
+                    "teamNameA"
+                    )
+                )
+
+                st.write(
+                    "Team2:",
+                    selected_match.get(
+                    "teamNameB"
+                    )
+                )
+
+                st.write(
+                    "Winner:",
+                    winner
+                )
+
+                st.write(
+                    "Scores:",
+                    score_a,
+                    score_b
+                )
+
+
+
+
+######debug
+
+
+
+
+
+                if team1_name and team2_name:
+
+                    TournamentService.record_doubles_match_result(
+
+                        selected_match.get(
+                            "tournamentName"
+                        ),
+
+                        team1_name,
+
+                        team2_name,
+
+                        winner,
+
+                        score_a,
+
+                        score_b
+
+                    )
+
+        st.session_state[
+            "match_updated"
+        ] = True
+
+        st.session_state[
+            "refresh_tournament"
+        ] = True
+
+        st.rerun()

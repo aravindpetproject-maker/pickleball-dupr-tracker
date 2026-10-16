@@ -198,11 +198,11 @@ if role == "Admin":
                     "to reload data."
                 )
 
-        else:
+            else:
 
-            st.error(
-                "Restore failed."
-            )
+                st.error(
+                    "Restore failed."
+                )
 
 # ============================
 # Leaderboard

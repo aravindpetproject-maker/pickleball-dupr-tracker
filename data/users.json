@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "admin123fifa",
+        "role": "Admin"
+    },
+    {
+        "id": 2,
+        "username": "organizer",
+        "password": "organizer123spain",
+        "role": "Organizer"
+    },
+    {
+        "id": 3,
+        "username": "viewer",
+        "password": "viewer123",
+        "role": "Viewer"
+    }
+]

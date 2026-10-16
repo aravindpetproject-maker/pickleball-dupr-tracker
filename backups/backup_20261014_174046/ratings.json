@@ -1,0 +1,274 @@
+[
+    {
+        "id": 1,
+        "playerId": 1,
+        "matchId": 3,
+        "previousRating": 3.5,
+        "newRating": 3.852,
+        "ratingChange": 0.352
+    },
+    {
+        "id": 2,
+        "playerId": 2,
+        "matchId": 3,
+        "previousRating": 3.5,
+        "newRating": 3.148,
+        "ratingChange": -0.352
+    },
+    {
+        "id": 3,
+        "playerId": 1,
+        "matchId": 4,
+        "previousRating": 3.852,
+        "newRating": 4.203,
+        "ratingChange": 0.351
+    },
+    {
+        "id": 4,
+        "playerId": 2,
+        "matchId": 4,
+        "previousRating": 3.148,
+        "newRating": 2.797,
+        "ratingChange": -0.351
+    },
+    {
+        "id": 5,
+        "playerId": 1,
+        "matchId": 5,
+        "previousRating": 4.203,
+        "newRating": 4.314,
+        "ratingChange": 0.111
+    },
+    {
+        "id": 6,
+        "playerId": 2,
+        "matchId": 5,
+        "previousRating": 2.797,
+        "newRating": 2.687,
+        "ratingChange": -0.11
+    },
+    {
+        "id": 7,
+        "playerId": 1,
+        "matchId": 6,
+        "previousRating": 4.314,
+        "newRating": 4.091,
+        "ratingChange": -0.223
+    },
+    {
+        "id": 8,
+        "playerId": 2,
+        "matchId": 6,
+        "previousRating": 2.687,
+        "newRating": 2.91,
+        "ratingChange": 0.223
+    },
+    {
+        "id": 9,
+        "playerId": 1,
+        "matchId": 7,
+        "previousRating": 4.091,
+        "newRating": 4.377,
+        "ratingChange": 0.286
+    },
+    {
+        "id": 10,
+        "playerId": 2,
+        "matchId": 7,
+        "previousRating": 2.91,
+        "newRating": 2.624,
+        "ratingChange": -0.286
+    },
+    {
+        "id": 11,
+        "playerId": 1,
+        "matchId": 8,
+        "previousRating": 4.377,
+        "newRating": 4.552,
+        "ratingChange": 0.175
+    },
+    {
+        "id": 12,
+        "playerId": 2,
+        "matchId": 8,
+        "previousRating": 2.624,
+        "newRating": 2.449,
+        "ratingChange": -0.175
+    },
+    {
+        "id": 13,
+        "playerId": 1,
+        "matchId": 9,
+        "previousRating": 4.552,
+        "newRating": 4.662,
+        "ratingChange": 0.11
+    },
+    {
+        "id": 14,
+        "playerId": 2,
+        "matchId": 9,
+        "previousRating": 2.449,
+        "newRating": 2.339,
+        "ratingChange": -0.11
+    },
+    {
+        "id": 15,
+        "playerId": 1,
+        "matchId": 10,
+        "previousRating": 4.662,
+        "newRating": 4.439,
+        "ratingChange": -0.223
+    },
+    {
+        "id": 16,
+        "playerId": 2,
+        "matchId": 10,
+        "previousRating": 2.339,
+        "newRating": 2.562,
+        "ratingChange": 0.223
+    },
+    {
+        "id": 17,
+        "playerId": 1,
+        "matchId": 11,
+        "previousRating": 4.439,
+        "newRating": 4.696,
+        "ratingChange": 0.257
+    },
+    {
+        "id": 18,
+        "playerId": 3,
+        "matchId": 11,
+        "previousRating": 3.5,
+        "newRating": 3.243,
+        "ratingChange": -0.257
+    },
+    {
+        "id": 19,
+        "playerId": 1,
+        "matchId": 12,
+        "previousRating": 4.696,
+        "newRating": 4.917,
+        "ratingChange": 0.221
+    },
+    {
+        "id": 20,
+        "playerId": 3,
+        "matchId": 12,
+        "previousRating": 3.243,
+        "newRating": 3.022,
+        "ratingChange": -0.221
+    },
+    {
+        "id": 21,
+        "playerId": 1,
+        "matchId": 13,
+        "previousRating": 4.917,
+        "newRating": 5.173,
+        "ratingChange": 0.256
+    },
+    {
+        "id": 22,
+        "playerId": 3,
+        "matchId": 13,
+        "previousRating": 3.022,
+        "newRating": 2.766,
+        "ratingChange": -0.256
+    },
+    {
+        "id": 23,
+        "playerId": 1,
+        "matchId": 14,
+        "previousRating": 5.173,
+        "newRating": 5.429,
+        "ratingChange": 0.256
+    },
+    {
+        "id": 24,
+        "playerId": 2,
+        "matchId": 14,
+        "previousRating": 2.562,
+        "newRating": 2.306,
+        "ratingChange": -0.256
+    },
+    {
+        "id": 25,
+        "playerId": 2,
+        "matchId": 15,
+        "previousRating": 2.306,
+        "newRating": 2.618,
+        "ratingChange": 0.312
+    },
+    {
+        "id": 26,
+        "playerId": 3,
+        "matchId": 15,
+        "previousRating": 2.766,
+        "newRating": 2.454,
+        "ratingChange": -0.312
+    },
+    {
+        "id": 27,
+        "playerId": 4,
+        "matchId": 16,
+        "previousRating": 3.5,
+        "newRating": 3.786,
+        "ratingChange": 0.286
+    },
+    {
+        "id": 28,
+        "playerId": 2,
+        "matchId": 16,
+        "previousRating": 2.618,
+        "newRating": 2.332,
+        "ratingChange": -0.286
+    },
+    {
+        "id": 29,
+        "playerId": 3,
+        "matchId": 17,
+        "previousRating": 2.454,
+        "newRating": 2.631,
+        "ratingChange": 0.177
+    },
+    {
+        "id": 30,
+        "playerId": 4,
+        "matchId": 17,
+        "previousRating": 3.786,
+        "newRating": 3.61,
+        "ratingChange": -0.176
+    },
+    {
+        "id": 31,
+        "playerId": 1,
+        "matchId": 18,
+        "previousRating": 5.429,
+        "newRating": 5.713,
+        "ratingChange": 0.284
+    },
+    {
+        "id": 32,
+        "playerId": 3,
+        "matchId": 18,
+        "previousRating": 2.631,
+        "newRating": 2.347,
+        "ratingChange": -0.284
+    },
+    {
+        "id": 33,
+        "playerId": 1,
+        "matchId": 19,
+        "previousRating": 5.713,
+        "newRating": 5.997,
+        "ratingChange": 0.284
+    },
+    {
+        "id": 34,
+        "playerId": 3,
+        "matchId": 19,
+        "previousRating": 2.347,
+        "newRating": 2.063,
+        "ratingChange": -0.284
+    }
+]

@@ -6,7 +6,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Completed",
         "schedule": [
@@ -16,7 +16,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D",
+                "team2Player2": "Nathan",
                 "winner": "Team 1",
                 "completed": true,
                 "scoreTeam1": 11,
@@ -34,7 +34,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Created",
         "schedule": [],
@@ -49,7 +49,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Created",
         "schedule": [],
@@ -64,7 +64,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Created",
         "schedule": [],
@@ -79,7 +79,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Scheduled",
         "schedule": [
@@ -89,7 +89,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D"
+                "team2Player2": "Nathan"
             }
         ],
         "champion": "",
@@ -103,7 +103,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Scheduled",
         "schedule": [
@@ -117,7 +117,7 @@
             },
             {
                 "player1": "John Smith",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             },
             {
                 "player1": "Sarah Johnson",
@@ -125,11 +125,11 @@
             },
             {
                 "player1": "Sarah Johnson",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             },
             {
                 "player1": "CHECK AB",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             }
         ],
         "champion": "",
@@ -143,7 +143,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Scheduled",
         "schedule": [
@@ -157,7 +157,7 @@
             },
             {
                 "player1": "John Smith",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             },
             {
                 "player1": "Sarah Johnson",
@@ -165,11 +165,11 @@
             },
             {
                 "player1": "Sarah Johnson",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             },
             {
                 "player1": "CHECK AB",
-                "player2": "Nithin D"
+                "player2": "Nathan"
             }
         ],
         "champion": "",
@@ -183,7 +183,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Scheduled",
         "schedule": [
@@ -193,7 +193,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D"
+                "team2Player2": "Nathan"
             }
         ],
         "champion": "",
@@ -207,7 +207,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D"
+            "Nathan"
         ],
         "status": "Scheduled",
         "schedule": [
@@ -217,7 +217,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D"
+                "team2Player2": "Nathan"
             }
         ],
         "champion": "",
@@ -231,7 +231,7 @@
             "John Smith",
             "Sarah Johnson",
             "CHECK AB",
-            "Nithin D",
+            "Nathan",
             "Testplay1 chk",
             "Testplay2 chk1"
         ],
@@ -243,7 +243,7 @@
                 "team1Player1": "John Smith",
                 "team1Player2": "Sarah Johnson",
                 "team2Player1": "CHECK AB",
-                "team2Player2": "Nithin D"
+                "team2Player2": "Nathan"
             },
             {
                 "team1": "Team 1",
@@ -257,7 +257,7 @@
                 "team1": "Team 2",
                 "team2": "Team 3",
                 "team1Player1": "CHECK AB",
-                "team1Player2": "Nithin D",
+                "team1Player2": "Nathan",
                 "team2Player1": "Testplay1 chk",
                 "team2Player2": "Testplay2 chk1"
             }

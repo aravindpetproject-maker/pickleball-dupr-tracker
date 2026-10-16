@@ -245,21 +245,21 @@ if role in ["Admin", "Organizer"]:
                     "Team B"
                 )
 
-    MatchService.update_match(
+        MatchService.update_match(
 
-        selected_match_id,
+            selected_match_id,
 
-        {
+            {
 
-            "scoreA": score_a,
+                "scoreA": score_a,
 
-            "scoreB": score_b,
+                "scoreB": score_b,
 
-            "winner": winner,
+                "winner": winner,
 
-            "notes": notes
+                "notes": notes
 
-        }
+            }
 
     )
 

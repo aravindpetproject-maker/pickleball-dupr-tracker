@@ -27,51 +27,60 @@ class BadgeService:
             )
         )
 
-        #
-        # Match Badges
-        #
+        wins = player.get(
+            "wins",
+            0
+        )
 
-        if player["wins"] >= 10:
+        matches_played = player.get(
+            "matchesPlayed",
+            0
+        )
+
+        win_percentage = player.get(
+            "winPercentage",
+            0
+        )
+
+        # Match Badges
+
+        if wins >= 10:
             badges.append("🏅 10 Wins Club")
 
-        if player["wins"] >= 25:
+        if wins >= 25:
             badges.append("🥈 25 Wins Club")
 
-        if player["wins"] >= 50:
+        if wins >= 50:
             badges.append("🥇 50 Wins Club")
 
-        #
         # Experience Badges
-        #
 
-        if player["matchesPlayed"] >= 25:
+        if matches_played >= 25:
             badges.append("🏓 Active Player")
 
-        if player["matchesPlayed"] >= 50:
+        if matches_played >= 50:
             badges.append("💪 Veteran")
 
-        if player["matchesPlayed"] >= 100:
+        if matches_played >= 100:
             badges.append("👑 Club Legend")
 
-        #
         # Win Percentage Badges
-        #
 
         if (
-            player["matchesPlayed"] >= 10
-            and player["winPercentage"] >= 60
+            matches_played >= 10
+            and
+            win_percentage >= 60
         ):
             badges.append("🔥 Consistent Winner")
 
         if (
-            player["matchesPlayed"] >= 10
-            and player["winPercentage"] >= 75
+            matches_played >= 10
+            and
+            win_percentage >= 75
         ):
             badges.append("🚀 Elite Performer")
 
-        #
         # DUPR Badges
-        #
 
         if highest_dupr >= 3.5:
             badges.append("⭐ Intermediate")
@@ -86,8 +95,8 @@ class BadgeService:
             badges.append("🏆 Pro Level")
 
         if (
-            highest_dupr
-            - previous_dupr
+            highest_dupr -
+            previous_dupr
         ) >= 0.10:
             badges.append("📈 Rising Star")
 

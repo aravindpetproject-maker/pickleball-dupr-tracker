@@ -5,6 +5,28 @@ class BadgeService:
 
         badges = []
 
+        highest_dupr = max(
+            player.get(
+                "currentDuprSingles",
+                3.5
+            ),
+            player.get(
+                "currentDuprDoubles",
+                3.5
+            )
+        )
+
+        previous_dupr = max(
+            player.get(
+                "previousDuprSingles",
+                highest_dupr
+            ),
+            player.get(
+                "previousDuprDoubles",
+                highest_dupr
+            )
+        )
+
         #
         # Match Badges
         #
@@ -51,22 +73,22 @@ class BadgeService:
         # DUPR Badges
         #
 
-        if player["currentDupr"] >= 3.5:
+        if highest_dupr >= 3.5:
             badges.append("⭐ Intermediate")
 
-        if player["currentDupr"] >= 4.0:
+        if highest_dupr >= 4.0:
             badges.append("🌟 Advanced")
 
-        if player["currentDupr"] >= 4.5:
+        if highest_dupr >= 4.5:
             badges.append("💎 Expert")
 
-        if player["currentDupr"] >= 5.0:
+        if highest_dupr >= 5.0:
             badges.append("🏆 Pro Level")
 
-        if (player["currentDupr"]   - player.get(
-        "previousDupr",
-         player["currentDupr"]    )) >= 0.10:
-             badges.append(
-        "📈 Rising Star"    )
+        if (
+            highest_dupr
+            - previous_dupr
+        ) >= 0.10:
+            badges.append("📈 Rising Star")
 
         return badges

@@ -84,13 +84,23 @@ if role in ["Admin", "Organizer"]:
             player_names
         )
 
-        create_clicked = (
-            st.form_submit_button(
-                "Create Tournament"
-            )
+        
+
+        create_clicked = st.form_submit_button(
+            "Create Tournament"
         )
 
         if create_clicked:
+
+            if not tournament_name:
+
+                st.error(
+                    "Tournament Name is required."
+                )
+
+                st.stop()
+
+            
 
             TournamentService.add_tournament({
 
@@ -102,6 +112,9 @@ if role in ["Admin", "Organizer"]:
 
                 "players":
                 selected_players,
+
+                "teams":
+                [],
 
                 "status":
                 "Created",
@@ -183,12 +196,298 @@ st.write(
 )
 
 if current_tournament.get(
+    "type"
+) == "Doubles":
+
+    teams = current_tournament.get(
+        "teams",
+        []
+    )
+
+    if teams:
+
+        st.subheader(
+            "🏓 Teams"
+        )
+
+        rows = []
+
+        for team in teams:
+
+            rows.append({
+
+                "Team Name":
+                team.get(
+                    "teamName",
+                    ""
+                ),
+
+                "Player 1":
+                team.get(
+                    "player1",
+                    ""
+                ),
+
+                "Player 2":
+                team.get(
+                    "player2",
+                    ""
+                )
+
+            })
+
+        st.dataframe(
+            pd.DataFrame(rows),
+            use_container_width=True
+        )
+
+if current_tournament.get(
     "champion"
 ):
 
     st.success(
         f"🏆 Champion: {current_tournament['champion']}"
     )
+
+
+
+# ===================================
+# Team Management
+# ===================================
+
+if (
+    current_tournament.get(
+        "type"
+    ) == "Doubles"
+    and
+    role in ["Admin", "Organizer"]
+):
+
+    st.divider()
+
+    st.subheader(
+        "🏓 Team Management"
+    )
+
+    existing_teams = current_tournament.get(
+        "teams",
+        []
+    )
+
+    if existing_teams:
+
+        st.write(
+            "Current Teams"
+        )
+
+        team_rows = []
+
+        for team in existing_teams:
+
+            team_rows.append({
+
+                "Team":
+                team["teamName"],
+
+                "Player 1":
+                team["player1"],
+
+                "Player 2":
+                team["player2"]
+
+            })
+
+        st.dataframe(
+            pd.DataFrame(
+                team_rows
+            ),
+            use_container_width=True
+        )
+
+
+
+        team_names = [
+
+            team["teamName"]
+
+            for team in existing_teams
+
+        ]
+
+        team_to_delete = st.selectbox(
+
+            "Select Team To Remove",
+
+            team_names,
+
+            key="delete_team"
+
+        )
+
+        if st.button(
+            "🗑 Remove Team"
+        ):
+
+            updated_teams = [
+
+                team
+
+                for team in existing_teams
+
+                if team["teamName"]
+                != team_to_delete
+
+            ]
+
+            TournamentService.update_tournament(
+
+                current_tournament["id"],
+
+                {
+                    "teams": updated_teams
+                }
+
+            )
+
+            st.success(
+                "✅ Team Removed"
+            )
+
+            st.rerun()
+
+
+
+    with st.form(
+        "add_team"
+    ):
+
+        team_name = st.text_input(
+            "Team Name"
+        )
+
+        player1 = st.selectbox(
+            "Player 1",
+            current_tournament[
+                "players"
+            ],
+            key="team_player1"
+        )
+
+        available_players = [
+
+            p
+
+            for p in current_tournament[
+                "players"
+            ]
+
+            if p != player1
+
+        ]
+
+        player2 = st.selectbox(
+            "Player 2",
+            available_players,
+            key="team_player2"
+        )
+
+        add_team_clicked = (
+            st.form_submit_button(
+                "➕ Add Team"
+            )
+        )
+
+        if add_team_clicked:
+
+            if not team_name.strip():
+
+                st.error(
+                    "Team Name is required."
+                )
+
+                st.stop()
+
+            updated_teams = (
+                current_tournament.get(
+                    "teams",
+                    []
+                )
+            )
+
+
+            for team in updated_teams:
+
+                existing_players = [
+
+                    team["player1"],
+                    team["player2"]
+
+                ]
+
+                if (
+                    player1 in existing_players
+                    or
+                    player2 in existing_players
+                ):
+
+                    st.error(
+                        "One or more selected players already belong to a team."
+                    )
+
+                    st.stop()
+
+            for team in updated_teams:
+
+                if (
+                    team["teamName"].lower()
+                    ==
+                    team_name.lower()
+                ):
+
+                    st.error(
+                        "Team name already exists."
+                    )
+
+                    st.stop()
+
+
+            updated_teams.append({
+
+                
+
+                "teamName":
+                team_name,
+
+                "player1":
+                player1,
+
+                "player2":
+                player2
+
+            })
+
+            TournamentService.update_tournament(
+
+                current_tournament[
+                    "id"
+                ],
+
+                {
+
+                    "teams":
+                    updated_teams
+
+                }
+
+            )
+
+            st.success(
+                "✅ Team Added"
+            )
+
+            st.rerun()
+
+
 
 # ===================================
 # Generate Schedule
@@ -209,32 +508,15 @@ if role in ["Admin", "Organizer"]:
             "Doubles"
         ):
 
-            players = current_tournament[
-                "players"
-            ]
+            teams = current_tournament.get(  "teams",  [])
 
-            teams = []
+            if len(teams) < 2:
 
-            for i in range(
-                0,
-                len(players),
-                2
-            ):
+                st.error(
+                    "At least 2 teams are required to generate a schedule."
+                )
 
-                if i + 1 < len(players):
-
-                    teams.append({
-
-                        "teamName":
-                        f"Team {len(teams) + 1}",
-
-                        "player1":
-                        players[i],
-
-                        "player2":
-                        players[i + 1]
-
-                    })
+                st.stop()
 
             schedule = []
 
@@ -530,9 +812,7 @@ if schedule:
             completed_matches == total_matches
         ):
 
-            st.write(
-                standings
-            )
+
 
             champion = (
                 standings[0]["Player"]

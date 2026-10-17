@@ -9,6 +9,8 @@ class BackupService:
     @staticmethod
     def create_backup():
 
+        # Create backup folder
+
         timestamp = datetime.now().strftime(
             "%Y%m%d_%H%M%S"
         )
@@ -22,6 +24,33 @@ class BackupService:
             "data",
             backup_folder
         )
+
+        # Keep only latest 5 backups
+
+        MAX_BACKUPS = 5
+
+        if os.path.exists(
+            "backups"
+        ):
+
+            backups = sorted(
+                os.listdir(
+                    "backups"
+                )
+            )
+
+            while len(backups) > MAX_BACKUPS:
+
+                oldest_backup = backups[0]
+
+                shutil.rmtree(
+                    os.path.join(
+                        "backups",
+                        oldest_backup
+                    )
+                )
+
+                backups.pop(0)
 
         return backup_folder
 
@@ -58,6 +87,7 @@ class BackupService:
         if os.path.exists(
             "data"
         ):
+
             shutil.rmtree(
                 "data"
             )

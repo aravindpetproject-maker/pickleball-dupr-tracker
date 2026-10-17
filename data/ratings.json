@@ -146,68 +146,14 @@
     {
         "id": 17,
         "playerId": 1,
-        "matchId": 11,
+        "matchId": 14,
         "ratingType": "Singles",
         "previousRating": 4.439,
-        "newRating": 4.696,
-        "ratingChange": 0.257
+        "newRating": 4.695,
+        "ratingChange": 0.256
     },
     {
         "id": 18,
-        "playerId": 3,
-        "matchId": 11,
-        "ratingType": "Singles",
-        "previousRating": 3.5,
-        "newRating": 3.243,
-        "ratingChange": -0.257
-    },
-    {
-        "id": 19,
-        "playerId": 1,
-        "matchId": 12,
-        "ratingType": "Singles",
-        "previousRating": 4.696,
-        "newRating": 4.917,
-        "ratingChange": 0.221
-    },
-    {
-        "id": 20,
-        "playerId": 3,
-        "matchId": 12,
-        "ratingType": "Singles",
-        "previousRating": 3.243,
-        "newRating": 3.022,
-        "ratingChange": -0.221
-    },
-    {
-        "id": 21,
-        "playerId": 1,
-        "matchId": 13,
-        "ratingType": "Singles",
-        "previousRating": 4.917,
-        "newRating": 5.173,
-        "ratingChange": 0.256
-    },
-    {
-        "id": 22,
-        "playerId": 3,
-        "matchId": 13,
-        "ratingType": "Singles",
-        "previousRating": 3.022,
-        "newRating": 2.766,
-        "ratingChange": -0.256
-    },
-    {
-        "id": 23,
-        "playerId": 1,
-        "matchId": 14,
-        "ratingType": "Singles",
-        "previousRating": 5.173,
-        "newRating": 5.429,
-        "ratingChange": 0.256
-    },
-    {
-        "id": 24,
         "playerId": 2,
         "matchId": 14,
         "ratingType": "Singles",
@@ -216,219 +162,111 @@
         "ratingChange": -0.256
     },
     {
-        "id": 25,
+        "id": 19,
+        "playerId": 1,
+        "matchId": 27,
+        "ratingType": "Singles",
+        "previousRating": 4.695,
+        "newRating": 4.87,
+        "ratingChange": 0.175
+    },
+    {
+        "id": 20,
         "playerId": 2,
-        "matchId": 15,
+        "matchId": 27,
         "ratingType": "Singles",
         "previousRating": 2.306,
-        "newRating": 2.618,
-        "ratingChange": 0.312
+        "newRating": 2.131,
+        "ratingChange": -0.175
+    },
+    {
+        "id": 21,
+        "playerId": 1,
+        "matchId": 28,
+        "ratingType": "Singles",
+        "previousRating": 4.87,
+        "newRating": 4.611,
+        "ratingChange": -0.259
+    },
+    {
+        "id": 22,
+        "playerId": 2,
+        "matchId": 28,
+        "ratingType": "Singles",
+        "previousRating": 2.131,
+        "newRating": 2.39,
+        "ratingChange": 0.259
+    },
+    {
+        "id": 23,
+        "playerId": 1,
+        "matchId": 29,
+        "ratingType": "Singles",
+        "previousRating": 4.611,
+        "newRating": 4.388,
+        "ratingChange": -0.223
+    },
+    {
+        "id": 24,
+        "playerId": 2,
+        "matchId": 29,
+        "ratingType": "Singles",
+        "previousRating": 2.39,
+        "newRating": 2.613,
+        "ratingChange": 0.223
+    },
+    {
+        "id": 25,
+        "playerId": 1,
+        "matchId": 30,
+        "ratingType": "Singles",
+        "previousRating": 4.388,
+        "newRating": 4.1,
+        "ratingChange": -0.288
     },
     {
         "id": 26,
-        "playerId": 3,
-        "matchId": 15,
+        "playerId": 2,
+        "matchId": 30,
         "ratingType": "Singles",
-        "previousRating": 2.766,
-        "newRating": 2.454,
-        "ratingChange": -0.312
+        "previousRating": 2.613,
+        "newRating": 2.901,
+        "ratingChange": 0.288
     },
     {
         "id": 27,
         "playerId": 1,
-        "matchId": 18,
+        "matchId": 31,
         "ratingType": "Singles",
-        "previousRating": 5.429,
-        "newRating": 5.713,
-        "ratingChange": 0.284
+        "previousRating": 4.1,
+        "newRating": 3.924,
+        "ratingChange": -0.176
     },
     {
         "id": 28,
-        "playerId": 3,
-        "matchId": 18,
+        "playerId": 2,
+        "matchId": 31,
         "ratingType": "Singles",
-        "previousRating": 2.454,
-        "newRating": 2.17,
-        "ratingChange": -0.284
+        "previousRating": 2.901,
+        "newRating": 3.077,
+        "ratingChange": 0.176
     },
     {
         "id": 29,
         "playerId": 1,
-        "matchId": 19,
+        "matchId": 35,
         "ratingType": "Singles",
-        "previousRating": 5.713,
-        "newRating": 5.997,
-        "ratingChange": 0.284
+        "previousRating": 3.924,
+        "newRating": 4.235,
+        "ratingChange": 0.311
     },
     {
         "id": 30,
-        "playerId": 3,
-        "matchId": 19,
-        "ratingType": "Singles",
-        "previousRating": 2.17,
-        "newRating": 1.886,
-        "ratingChange": -0.284
-    },
-    {
-        "id": 31,
-        "playerId": 1,
-        "matchId": 26,
-        "ratingType": "Doubles",
-        "previousRating": 3.5,
-        "newRating": 3.757,
-        "ratingChange": 0.257
-    },
-    {
-        "id": 32,
-        "playerId": 2,
-        "matchId": 26,
-        "ratingType": "Doubles",
-        "previousRating": 3.5,
-        "newRating": 3.757,
-        "ratingChange": 0.257
-    },
-    {
-        "id": 33,
-        "playerId": 5,
-        "matchId": 26,
-        "ratingType": "Doubles",
-        "previousRating": 3.5,
-        "newRating": 3.243,
-        "ratingChange": -0.257
-    },
-    {
-        "id": 34,
-        "playerId": 6,
-        "matchId": 26,
-        "ratingType": "Doubles",
-        "previousRating": 3.5,
-        "newRating": 3.243,
-        "ratingChange": -0.257
-    },
-    {
-        "id": 35,
-        "playerId": 1,
-        "matchId": 27,
-        "ratingType": "Singles",
-        "previousRating": 5.997,
-        "newRating": 6.171,
-        "ratingChange": 0.174
-    },
-    {
-        "id": 36,
-        "playerId": 2,
-        "matchId": 27,
-        "ratingType": "Singles",
-        "previousRating": 2.618,
-        "newRating": 2.444,
-        "ratingChange": -0.174
-    },
-    {
-        "id": 37,
-        "playerId": 1,
-        "matchId": 28,
-        "ratingType": "Singles",
-        "previousRating": 6.171,
-        "newRating": 5.911,
-        "ratingChange": -0.26
-    },
-    {
-        "id": 38,
-        "playerId": 2,
-        "matchId": 28,
-        "ratingType": "Singles",
-        "previousRating": 2.444,
-        "newRating": 2.704,
-        "ratingChange": 0.26
-    },
-    {
-        "id": 39,
-        "playerId": 1,
-        "matchId": 29,
-        "ratingType": "Singles",
-        "previousRating": 5.911,
-        "newRating": 5.687,
-        "ratingChange": -0.224
-    },
-    {
-        "id": 40,
-        "playerId": 2,
-        "matchId": 29,
-        "ratingType": "Singles",
-        "previousRating": 2.704,
-        "newRating": 2.928,
-        "ratingChange": 0.224
-    },
-    {
-        "id": 41,
-        "playerId": 1,
-        "matchId": 30,
-        "ratingType": "Singles",
-        "previousRating": 5.687,
-        "newRating": 5.398,
-        "ratingChange": -0.289
-    },
-    {
-        "id": 42,
-        "playerId": 2,
-        "matchId": 30,
-        "ratingType": "Singles",
-        "previousRating": 2.928,
-        "newRating": 3.217,
-        "ratingChange": 0.289
-    },
-    {
-        "id": 43,
-        "playerId": 1,
-        "matchId": 31,
-        "ratingType": "Singles",
-        "previousRating": 5.398,
-        "newRating": 5.221,
-        "ratingChange": -0.177
-    },
-    {
-        "id": 44,
-        "playerId": 2,
-        "matchId": 31,
-        "ratingType": "Singles",
-        "previousRating": 3.217,
-        "newRating": 3.394,
-        "ratingChange": 0.177
-    },
-    {
-        "id": 45,
-        "playerId": 1,
-        "matchId": 32,
-        "ratingType": "Singles",
-        "previousRating": 5.221,
-        "newRating": 4.961,
-        "ratingChange": -0.26
-    },
-    {
-        "id": 46,
-        "playerId": 3,
-        "matchId": 32,
-        "ratingType": "Singles",
-        "previousRating": 1.886,
-        "newRating": 2.146,
-        "ratingChange": 0.26
-    },
-    {
-        "id": 47,
-        "playerId": 1,
-        "matchId": 35,
-        "ratingType": "Singles",
-        "previousRating": 4.961,
-        "newRating": 5.271,
-        "ratingChange": 0.31
-    },
-    {
-        "id": 48,
         "playerId": 2,
         "matchId": 35,
         "ratingType": "Singles",
-        "previousRating": 3.394,
-        "newRating": 3.084,
-        "ratingChange": -0.31
+        "previousRating": 3.077,
+        "newRating": 2.766,
+        "ratingChange": -0.311
     }
 ]

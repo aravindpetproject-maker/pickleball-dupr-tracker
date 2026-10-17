@@ -55,7 +55,10 @@ if "recalc_result" in st.session_state:
 # System Maintenance
 # ============================
 
-if role == "Admin":
+if role in [
+    "Admin",
+    "Organizer"
+]:
 
     st.divider()
 
@@ -87,75 +90,77 @@ if role == "Admin":
 # Backup Management
 # ============================
 
-st.divider()
+if role == "Admin":
 
-st.subheader(
-    "💾 Backup Management"
-)
+    st.divider()
 
-st.info(
-    "Create a backup of all application data."
-)
-
-if st.button(
-    "💾 Backup Data"
-):
-
-    backup_folder = (
-        BackupService.create_backup()
+    st.subheader(
+        "💾 Backup Management"
     )
 
-    st.success(
-        "✅ Backup Created Successfully"
+    st.info(
+        "Create a backup of all application data."
     )
 
-    st.write(
-        f"Location: {backup_folder}"
+    if st.button(
+        "💾 Backup Data"
+    ):
+
+        backup_folder = (
+            BackupService.create_backup()
+        )
+
+        st.success(
+            "✅ Backup Created Successfully"
+        )
+
+        st.write(
+            f"Location: {backup_folder}"
+        )
+
+    # ============================
+    # Existing Backups
+    # ============================
+
+    st.subheader(
+        "📁 Available Backups"
     )
 
+    if os.path.exists(
+        "backups"
+    ):
 
-# ============================
-# Existing Backups
-# ============================
+        backup_list = sorted(
+            os.listdir(
+                "backups"
+            ),
+            reverse=True
+        )
 
-import os
+        if backup_list:
 
-st.subheader(
-    "📁 Available Backups"
-)
+            for backup in backup_list:
 
-if os.path.exists("backups"):
+                st.write(
+                    f"📁 {backup}"
+                )
 
-    backup_list = sorted(
-        os.listdir("backups"),
-        reverse=True
-    )
+        else:
 
-    if backup_list:
-
-        for backup in backup_list:
-
-            st.write(
-                f"📁 {backup}"
+            st.info(
+                "No backups found."
             )
 
     else:
 
         st.info(
-            "No backups found."
+            "Backups folder does not exist."
         )
 
-else:
+    # ============================
+    # Restore Backup
+    # ============================
 
-    st.info(
-        "Backups folder does not exist."
-    )
-
-# ============================
-# Restore Backups
-# ============================
-
-if role == "Admin":
     st.divider()
 
     st.subheader(
@@ -194,8 +199,7 @@ if role == "Admin":
                 )
 
                 st.warning(
-                    "Restart Streamlit "
-                    "to reload data."
+                    "Restart Streamlit to reload data."
                 )
 
             else:

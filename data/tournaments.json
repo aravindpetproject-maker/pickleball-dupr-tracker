@@ -1,182 +1,5 @@
 [
     {
-        "name": "Pickler",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Completed",
-        "schedule": [
-            {
-                "team1": "Team 1",
-                "team2": "Team 2",
-                "team1Player1": "John Smith",
-                "team1Player2": "Sarah Johnson",
-                "team2Player1": "CHECK AB",
-                "team2Player2": "Nathan",
-                "winner": "Team 1",
-                "completed": true,
-                "scoreTeam1": 11,
-                "scoreTeam2": 8
-            }
-        ],
-        "champion": "Team 1",
-        "id": 2,
-        "createdAt": "2026-10-14 18:23:02.566093"
-    },
-    {
-        "name": "Pickler",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Created",
-        "schedule": [],
-        "champion": "",
-        "id": 3,
-        "createdAt": "2026-10-14 18:23:15.626269"
-    },
-    {
-        "name": "Pickler",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Created",
-        "schedule": [],
-        "champion": "",
-        "id": 4,
-        "createdAt": "2026-10-14 18:23:26.991034"
-    },
-    {
-        "name": "Pickler",
-        "type": "Singles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Created",
-        "schedule": [],
-        "champion": "",
-        "id": 5,
-        "createdAt": "2026-10-14 18:23:32.422297"
-    },
-    {
-        "name": "checker",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Scheduled",
-        "schedule": [
-            {
-                "team1": "Team 1",
-                "team2": "Team 2",
-                "team1Player1": "John Smith",
-                "team1Player2": "Sarah Johnson",
-                "team2Player1": "CHECK AB",
-                "team2Player2": "Nathan"
-            }
-        ],
-        "champion": "",
-        "id": 6,
-        "createdAt": "2026-10-14 18:23:42.047267"
-    },
-    {
-        "name": "cfdgffddd",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Scheduled",
-        "schedule": [
-            {
-                "player1": "John Smith",
-                "player2": "Sarah Johnson"
-            },
-            {
-                "player1": "John Smith",
-                "player2": "CHECK AB"
-            },
-            {
-                "player1": "John Smith",
-                "player2": "Nathan"
-            },
-            {
-                "player1": "Sarah Johnson",
-                "player2": "CHECK AB"
-            },
-            {
-                "player1": "Sarah Johnson",
-                "player2": "Nathan"
-            },
-            {
-                "player1": "CHECK AB",
-                "player2": "Nathan"
-            }
-        ],
-        "champion": "",
-        "id": 7,
-        "createdAt": "2026-10-14 18:28:14.774610"
-    },
-    {
-        "name": "ddoubl",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Scheduled",
-        "schedule": [
-            {
-                "player1": "John Smith",
-                "player2": "Sarah Johnson"
-            },
-            {
-                "player1": "John Smith",
-                "player2": "CHECK AB"
-            },
-            {
-                "player1": "John Smith",
-                "player2": "Nathan"
-            },
-            {
-                "player1": "Sarah Johnson",
-                "player2": "CHECK AB"
-            },
-            {
-                "player1": "Sarah Johnson",
-                "player2": "Nathan"
-            },
-            {
-                "player1": "CHECK AB",
-                "player2": "Nathan"
-            }
-        ],
-        "champion": "",
-        "id": 8,
-        "createdAt": "2026-10-14 18:34:49.744679"
-    },
-    {
         "name": "Doublecheck",
         "type": "Doubles",
         "players": [
@@ -198,31 +21,8 @@
         ],
         "champion": "",
         "id": 9,
-        "createdAt": "2026-10-14 22:47:56.754857"
-    },
-    {
-        "name": "checkd",
-        "type": "Doubles",
-        "players": [
-            "John Smith",
-            "Sarah Johnson",
-            "CHECK AB",
-            "Nathan"
-        ],
-        "status": "Scheduled",
-        "schedule": [
-            {
-                "team1": "Team 1",
-                "team2": "Team 2",
-                "team1Player1": "John Smith",
-                "team1Player2": "Sarah Johnson",
-                "team2Player1": "CHECK AB",
-                "team2Player2": "Nathan"
-            }
-        ],
-        "champion": "",
-        "id": 10,
-        "createdAt": "2026-10-14 23:02:14.912470"
+        "createdAt": "2026-10-14 22:47:56.754857",
+        "teams": []
     },
     {
         "name": "checkdouble",
@@ -264,7 +64,8 @@
         ],
         "champion": "",
         "id": 11,
-        "createdAt": "2026-10-14 23:09:51.127379"
+        "createdAt": "2026-10-14 23:09:51.127379",
+        "teams": []
     },
     {
         "name": "singlesc",
@@ -291,6 +92,7 @@
         ],
         "champion": "",
         "id": 12,
-        "createdAt": "2026-10-15 15:54:42.088586"
+        "createdAt": "2026-10-15 15:54:42.088586",
+        "teams": []
     }
 ]

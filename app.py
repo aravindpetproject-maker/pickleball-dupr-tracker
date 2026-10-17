@@ -4,7 +4,10 @@ from services.auth_service import (
     AuthService
 )
 
-# If already logged in, go to Dashboard
+# ===================================
+# Redirect Logged In Users
+# ===================================
+
 if st.session_state.get(
     "logged_in",
     False
@@ -14,6 +17,10 @@ if st.session_state.get(
         "pages/1_Dashboard.py"
     )
 
+# ===================================
+# Page Header
+# ===================================
+
 st.title(
     "🏓 Montebello Pickleball DUPR Tracker"
 )
@@ -21,6 +28,10 @@ st.title(
 st.subheader(
     "🔐 Login"
 )
+
+# ===================================
+# Login Form
+# ===================================
 
 username = st.text_input(
     "Username"
@@ -32,6 +43,10 @@ password = st.text_input(
 )
 
 col1, col2 = st.columns(2)
+
+# ===================================
+# Login Button
+# ===================================
 
 with col1:
 
@@ -63,13 +78,19 @@ with col1:
                 "role"
             ]
 
-            st.rerun()
+            st.switch_page(
+                "pages/1_Dashboard.py"
+            )
 
         else:
 
             st.error(
                 "Invalid username or password"
             )
+
+# ===================================
+# Continue As Viewer
+# ===================================
 
 with col2:
 
@@ -80,6 +101,26 @@ with col2:
 
         st.session_state[
             "logged_in"
-        ] = False
+        ] = True
 
-     
+        st.session_state[
+            "username"
+        ] = "Guest"
+
+        st.session_state[
+            "role"
+        ] = "Viewer"
+
+        st.switch_page(
+            "pages/1_Dashboard.py"
+        )
+
+# ===================================
+# Footer
+# ===================================
+
+st.divider()
+
+st.caption(
+    "Viewer mode provides read-only access to dashboards, rankings, tournaments, and reports."
+)

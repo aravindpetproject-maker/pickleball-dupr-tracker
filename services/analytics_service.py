@@ -14,8 +14,9 @@ class AnalyticsService:
 
         return sorted(
             players,
-            key=lambda player:
-            player["currentDupr"],
+            key=lambda player: max(
+            player.get("currentDuprSingles",3.5),
+            player.get("currentDuprDoubles",3.5)),
             reverse=True
         )
 
@@ -29,7 +30,10 @@ class AnalyticsService:
         return sorted(
             players,
             key=lambda player:
-            player["winPercentage"],
+            player.get(
+                "winPercentage",
+                0
+            ),
             reverse=True
         )
 

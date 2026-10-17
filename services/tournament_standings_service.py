@@ -93,18 +93,23 @@ class TournamentStandingsService:
 
         teams = set()
 
+        for team in tournament.get(
+            "teams",
+            []
+        ):
+
+            teams.add(
+                team["teamName"]
+            )
+
         for match in schedule:
 
             teams.add(
-                match.get(
-                    "team1"
-                )
+                match.get("team1")
             )
 
             teams.add(
-                match.get(
-                    "team2"
-                )
+                match.get("team2")
             )
 
         for team in teams:

@@ -515,3 +515,26 @@ st.info(
     f"have been played."
 )
 
+view_count = (
+    DashboardStatsService
+    .get_views()
+)
+
+# =====================================================
+# DASHBOARD VIEWS
+# =====================================================
+
+st.divider()
+
+st.subheader(
+    "👀 Dashboard Statistics"
+)
+
+st.metric(
+    "Total Dashboard Views",
+    view_count
+)
+
+st.caption(
+    "Total number of dashboard visits recorded."
+)

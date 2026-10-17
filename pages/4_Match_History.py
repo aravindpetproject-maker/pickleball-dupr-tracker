@@ -81,12 +81,111 @@ st.subheader(
     "Match History"
 )
 
-st.dataframe(
-    pd.DataFrame(matches),
-    use_container_width=True
+display_rows = []
+
+for match in matches:
+
+    match_type = match.get(
+        "matchType",
+        "Singles"
+    )
+
+    if match_type == "Singles":
+
+        participant_a = match.get(
+            "playerA",
+            ""
+        )
+
+        participant_b = match.get(
+            "playerB",
+            ""
+        )
+
+        participant_a_players = participant_a
+
+        participant_b_players = participant_b
+
+    else:
+
+        participant_a = match.get(
+            "teamNameA",
+            "Team A"
+        )
+
+        participant_b = match.get(
+            "teamNameB",
+            "Team B"
+        )
+
+        participant_a_players = (
+            f"{match.get('teamAPlayer1','')} / "
+            f"{match.get('teamAPlayer2','')}"
+        )
+
+        participant_b_players = (
+            f"{match.get('teamBPlayer1','')} / "
+            f"{match.get('teamBPlayer2','')}"
+        )
+
+    display_rows.append({
+
+        "Match ID":
+        match.get(
+            "id",
+            ""
+        ),
+
+        "Date Played":
+        match.get(
+            "createdAt",
+            ""
+        ).replace(
+            "T",
+            " "
+        )[:19],
+
+        "Type":
+        match_type,
+
+        "Participant A":
+        participant_a,
+
+        "A Players":
+        participant_a_players,
+
+        "Participant B":
+        participant_b,
+
+        "B Players":
+        participant_b_players,
+
+        "Score":
+        f"{match.get('scoreA',0)} - "
+        f"{match.get('scoreB',0)}",
+
+        "Winner":
+        match.get(
+            "winner",
+            ""
+        )
+
+    })
+
+history_df = pd.DataFrame(
+    display_rows
 )
 
-st.divider()
+history_df = history_df.sort_values(
+    by="Match ID",
+    ascending=False
+)
+
+st.dataframe(
+    history_df,
+    use_container_width=True,
+    hide_index=True
+)
 
 # =====================================
 # Edit Match

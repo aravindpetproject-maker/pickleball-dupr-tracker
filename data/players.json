@@ -54,5 +54,31 @@
         "doublesLosses": 0,
         "doublesMatchesPlayed": 0,
         "doublesWinPercentage": 0
+    },
+    {
+        "firstName": "ara",
+        "lastName": "kum",
+        "email": "",
+        "phone": "",
+        "gender": "Male",
+        "ageGroup": "35-49",
+        "id": 3,
+        "winPercentage": 0,
+        "currentDuprSingles": 3.5,
+        "previousDuprSingles": 3.5,
+        "currentDuprDoubles": 3.5,
+        "previousDuprDoubles": 3.5,
+        "matchesPlayed": 0,
+        "wins": 0,
+        "losses": 0,
+        "singlesWins": 0,
+        "singlesLosses": 0,
+        "singlesMatchesPlayed": 0,
+        "singlesWinPercentage": 0,
+        "doublesWins": 0,
+        "doublesLosses": 0,
+        "doublesMatchesPlayed": 0,
+        "doublesWinPercentage": 0,
+        "createdAt": "2026-10-17 16:47:37.111142"
     }
 ]

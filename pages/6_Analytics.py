@@ -107,7 +107,13 @@ if role == "Admin":
     ):
 
         backup_folder = (
-            BackupService.create_backup()
+            BackupService
+            .create_backup()
+        )
+
+        zip_file = (
+            BackupService
+            .create_backup_zip()
         )
 
         st.success(
@@ -115,8 +121,29 @@ if role == "Admin":
         )
 
         st.write(
-            f"Location: {backup_folder}"
+            f"Backup Folder: {backup_folder}"
         )
+
+        with open(
+            zip_file,
+            "rb"
+        ) as file:
+
+            st.download_button(
+
+                label="📥 Download Backup ZIP",
+
+                data=file.read(),
+
+                file_name=os.path.basename(
+                    zip_file
+                ),
+
+                mime="application/zip",
+
+                use_container_width=True
+
+            )
 
     # ============================
     # Existing Backups
@@ -207,6 +234,55 @@ if role == "Admin":
                 st.error(
                     "Restore failed."
                 )
+
+    # ============================
+    # Restore From Backup ZIP
+    # ============================
+
+    st.divider()
+
+    st.subheader(
+        "📤 Restore From Backup ZIP"
+    )
+
+    uploaded_backup = st.file_uploader(
+        "Upload Backup ZIP",
+        type=["zip"]
+    )
+
+    if uploaded_backup:
+
+        st.warning(
+            "This will replace all current data."
+        )
+
+        if st.button(
+            "♻️ Restore Uploaded ZIP"
+        ):
+
+            success = (
+                BackupService
+                .restore_zip_backup(
+                    uploaded_backup
+                )
+            )
+
+            if success:
+
+                st.success(
+                    "✅ Backup ZIP restored successfully."
+                )
+
+                st.warning(
+                    "Please restart Streamlit to reload data."
+                )
+
+            else:
+
+                st.error(
+                    "ZIP restore failed."
+                )
+
 
 # ============================
 # Leaderboard
